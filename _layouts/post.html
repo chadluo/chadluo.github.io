@@ -1,0 +1,8 @@
+---
+layout: default
+---
+<h1>{{ page.title }}</h1>
+<div class="ty post">
+  {{ content }}
+</div>
+<p class="meta"><time datetime="{{ page.date | date: "%Y-%m-%d" }}">{{ page.date | date_to_string }}</time></p>
