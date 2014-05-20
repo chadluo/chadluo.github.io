@@ -2,3 +2,5 @@ name: nagare
 markdown: redcarpet
 pygments: true
 permalink: ./:year/:title/
+description: にげて
+url: http://yukir.net

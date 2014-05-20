@@ -1,8 +1,9 @@
 ---
 layout: default
 ---
-<h1>{{ page.title }}</h1>
-<div class="ty post">
-  {{ content }}
+<nav class="nav"><span class="banner">{{ page.category }}</span></nav>
+<div class="ty ty-wide post">
+    <h1>{{ page.title }}</h1>
+    {{ content }}
+    <p class="meta"><time datetime="{{ page.date | date: "%Y-%m-%d" }}" title="{{ page.date | date_to_string }}">{{ page.date | date: "%Y" }}</time></p>
 </div>
-<p class="meta"><time datetime="{{ page.date | date: "%Y-%m-%d" }}">{{ page.date | date_to_string }}</time></p>
