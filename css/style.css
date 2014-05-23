@@ -46,6 +46,15 @@ a:hover {
     border-bottom: 1px solid #777;
 }
 
+body {
+    font-family: 'Libre Baskerville', 'ipamjm', serif;
+}
+
+h1 {
+    font-weight: normal;
+    font-family: 'xingothic-tc-w8', sans-serif;
+}
+
 .pdate {
     color: #777;
     float: right;
@@ -66,10 +75,6 @@ a:hover {
     font-style: italic;
     padding: 0 0.5em;
     background: #FFF;
-}
-
-.banner,.meta {
-    font-family: 'Libre Baskerville', serif;
 }
 
 .posts {
