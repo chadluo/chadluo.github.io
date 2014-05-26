@@ -39,6 +39,7 @@ footer {
 a {
     color: #000;
     text-decoration: none;
+    border-bottom: 1px solid #CCC;
     text-shadow: -3px 1px 0 #FFF,-2px 1px 0 #FFF,-1px 1px 0 #FFF,1px 1px 0 #FFF,2px 1px 0 #FFF,3px 1px 0 #FFF;
 }
 
@@ -47,12 +48,12 @@ a:hover {
 }
 
 body {
-    font-family: 'Crimson Text', 'ipamjm', serif;
+    font-family: 'Crimson Text', 'datm3', serif;
 }
 
 h1 {
     font-weight: normal;
-    font-family: 'xingothic-tc-w6', sans-serif;
+    font-family: 'Crimson Text', 'datm7', serif;
 }
 
 .pdate {
@@ -60,7 +61,7 @@ h1 {
     float: right;
 }
 
-.post h1,.post .meta {
+h1,.post .meta {
     text-align: center;
 }
 
