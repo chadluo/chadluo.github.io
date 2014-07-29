@@ -32,3 +32,4 @@ eof
 close FILE;
 
 print $name."\n";
+system("mousepad ".$name);
