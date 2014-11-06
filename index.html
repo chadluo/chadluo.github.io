@@ -1,6 +1,88 @@
----
-layout: default
-title: nagare
----
-<h1>Chad Luo</h1>
-<p>Aka yukirock, is currently pursuing a Bachelor of Computer Science at UNSW Australia. He is interested in web and graphical design as well as photography. He has experience in Python and Haskell, and is eager to learn anything intended for simplifying things. He speaks Mandarin, English and Japanese, and once played in a band as a bassist.</p>
+<!DOCTYPE html>
+<html>
+    <head>
+        <meta charset="utf-8">
+        <meta name="viewport" content="width=device-width">
+        <title>Chad Luo</title>
+        <link rel='stylesheet' href='//cdnjs.cloudflare.com/ajax/libs/normalize/3.0.1/normalize.min.css'>
+        <link rel='stylesheet' href='http://fonts.googleapis.com/css?family=Rosarivo:400,400italic|Asul'>
+        <style>
+            .container, footer {
+                max-width: 600px;
+                width: 85%;
+                margin: auto;
+            }
+            h1 span {
+                margin: 0 0.2em;
+            }
+            p {
+                font-size: 14px;
+                line-height: 21px;
+            }
+            footer {
+                margin-bottom: 2rem;
+            }
+            .nav {
+                text-align: center;
+                border-bottom: 1px solid #333;
+            }
+            .banner {
+                font-size: 14px;
+                font-style: italic;
+                position: relative;
+                top: 0.55rem;
+                padding: 0 1.5em;
+                background: #FFF;
+            }
+            h1 {
+                font-weight: normal;
+                font-size:   42px;
+                line-height: 63px;
+                height:      63px;
+                text-align:  center;
+                margin-top:  15vmin;
+            }
+            .font-futura      { font-family: "Futura"; }
+            .font-helvetica   { font-family: "Helvetica Neue"; }
+            .font-rosarivo    { font-family: "Rosarivo"; }
+            .font-asul        { font-family: "Asul"; }
+            @media screen and (min-width: 800px) {
+                footer {
+                    position: fixed;
+                    bottom: 0;
+                    left: 0;
+                    right: 0;
+                    margin: 0 auto 2rem;
+                    z-index: -1;
+                }
+
+            }
+        </style>
+    </head>
+    <body>
+        <div class="container">
+            <h1 id="title"><span>I</span><span>,</span><span>&nbsp;</span><span>C</span><span>h</span><span>a</span><span>d</span><span>&nbsp;</span><span>L</span><span>u</span><span>o</span><span>,</span></h1>
+            <p class="font-rosarivo">aka yukirock, am a programmer and designer.
+            I am currently pursuing a Bachelor of Computer Science at UNSW Australia.
+            I am interested in web and graphical design as well as photography.
+            I speak Mandarin, English and Japanese.
+            I once played in a band as a bassist.</p>
+        </div>
+        <footer class="font-rosarivo"><address class="nav"><span class="banner">i at yukir.net</span></address></footer>
+        <script>
+            var fonts = [
+            "font-futura",
+            "font-helvetica",
+            "font-rosarivo",
+            "font-asul"
+            ]
+            var chars = document.getElementById("title").getElementsByTagName("span");
+            setInterval(function() {
+                for (var i = 0; i < chars.length; i++) {
+                    chars[i].className=fonts[Math.floor(Math.random()*fonts.length)]
+                }
+            }
+            ,100);
+        </script>
+    </body>
+</html>
