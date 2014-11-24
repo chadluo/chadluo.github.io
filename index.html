@@ -4,49 +4,44 @@
         <meta charset="utf-8">
         <meta name="viewport" content="width=device-width">
         <title>Chad Luo</title>
-        <link rel="icon" type="image/png" href="data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAACAAAAAgCAYAAABzenr0AAAABmJLR0QA/wD/AP+gvaeTAAAACXBIWXMAAAsTAAALEwEAmpwYAAAAB3RJTUUH3QcOECYNkcJSmwAAAB1pVFh0Q29tbWVudAAAAAAAQ3JlYXRlZCB3aXRoIEdJTVBkLmUHAAAA8ElEQVRYw+1WywrCMBDcXetvCpaCeLAf00MvlvqhVtaLlDam+0gDImTOmcm+ZhOAgoKCf0NbD5yTh6ki3dhgDh7uycAShMbDvWWXgrDwMEfPY0FYedjWg3TGPHDLIDyDSt7MtHO382BurVQBDkTYkbmLR0LZWXPLRtldPFJ6LolJPd/khW0lQ7liYpaB++LFZoqM074Sm/hlnXZ1c5LDavwRgv5x8ViUu7HZtqFjp8+ZX093l9VE0YUNpYxmEWYARPOyQin7cAhRy/w5cXi5yEvZhFHLVHgAZoBjhWC8zPzKkiC2frd1SUz5YxQUFPwcb7LOfPn2a8s/AAAAAElFTkSuQmCC">
-        <link rel='stylesheet' href='//cdnjs.cloudflare.com/ajax/libs/normalize/3.0.1/normalize.min.css'>
-        <link rel='stylesheet' href='http://fonts.googleapis.com/css?family=Rosarivo:400,400italic|Asul'>
+        <link rel="icon" type="image/png" href="data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAACAAAAAgCAYAAABzenr0AAAABmJLR0QA/wD/AP+gvaeTAAAACXBIWXMAAAsTAAALEwEAmpwYAAAAB3RJTUUH3QcOECYNkcJSmwAAAB1pVFh0Q29tbWVudAAAAAAAQ3JlYXRlZCB3aXRoIEdJTVBkLmUHAAAA8ElEQVRYw+1WywrCMBDcXetvCpaCeLAf00MvlvqhVtaLlDam+0gDImTOmcm+ZhOAgoKCf0NbD5yTh6ki3/AAAAAElFTkSuQmCC">
+        <link href='http://fonts.googleapis.com/css?family=Cardo:400,400italic' rel='stylesheet' type='text/css'>
         <style>
+            body {
+                font-family: 'Cardo', serif;
+            }
+            a {
+                color: #808080;
+                text-decoration: none;
+            }
+            a:hover { text-decoration: underline; }
+            h1 {
+                font-weight: normal;
+                text-align: center;
+                font-size: 30vmin;
+                line-height: 24vmin;
+                margin-top: 20vmin;
+                margin-bottom: 10vmin;
+            }
             .container, footer {
                 max-width: 600px;
                 width: 85%;
                 margin: auto;
             }
-            h1 span {
-                margin: 0 0.2em;
-            }
-            p {
-                font-size: 14px;
-                line-height: 21px;
-            }
             footer {
                 margin-bottom: 2rem;
+                font-size: 14px;
             }
             .nav {
                 text-align: center;
-                border-bottom: 1px solid #333;
+                border-bottom: 1px solid #808080;
             }
             .banner {
-                font-size: 14px;
-                font-style: italic;
                 position: relative;
                 top: 0.55rem;
                 padding: 0 1.5em;
                 background: #FFF;
             }
-            h1 {
-                font-weight: normal;
-                font-size:   42px;
-                line-height: 63px;
-                height:      63px;
-                text-align:  center;
-                margin-top:  15vmin;
-            }
-            .font-futura      { font-family: "Futura"; }
-            .font-helvetica   { font-family: "Helvetica Neue"; }
-            .font-rosarivo    { font-family: "Rosarivo"; }
-            .font-asul        { font-family: "Asul"; }
             @media screen and (min-width: 800px) {
                 footer {
                     position: fixed;
@@ -56,34 +51,18 @@
                     margin: 0 auto 2rem;
                     z-index: -1;
                 }
-
             }
         </style>
     </head>
     <body>
+        <h1>Chad Luo,</h1>
         <div class="container">
-            <h1 id="title"><span>I</span><span>,</span><span>&nbsp;</span><span>C</span><span>h</span><span>a</span><span>d</span><span>&nbsp;</span><span>L</span><span>u</span><span>o</span><span>,</span></h1>
-            <p class="font-rosarivo">aka yukirock, am a programmer and designer.
-            I am currently pursuing a Bachelor of Computer Science at UNSW Australia.
-            I am interested in web and graphical design as well as photography.
-            I speak Mandarin, English and Japanese.
-            I once played in a band as a bassist.</p>
+            <p>aka yukirock, is a developer and designer.
+            He is currently pursuing a Bachelor of Computer Science at UNSW Australia.
+            He is interested in web and graphical design as well as photography.
+            He speaks Mandarin, English and Japanese, and once played in a band as a bassist.</p>
+            <p><a href="https://twitter.com/luoxr" target="_blank">twitter</a> / <a href="https://github.com/chadluo" target="_blank">github</a></p>
         </div>
-        <footer class="font-rosarivo"><address class="nav"><span class="banner">i at yuki.rocks</span></address></footer>
-        <script>
-            var fonts = [
-            "font-futura",
-            "font-helvetica",
-            "font-rosarivo",
-            "font-asul"
-            ]
-            var chars = document.getElementById("title").getElementsByTagName("span");
-            setInterval(function() {
-                for (var i = 0; i < chars.length; i++) {
-                    chars[i].className=fonts[Math.floor(Math.random()*fonts.length)]
-                }
-            }
-            ,100);
-        </script>
+        <footer><address class="nav"><span class="banner">i at yuki.rocks</span></address></footer>
     </body>
 </html>
