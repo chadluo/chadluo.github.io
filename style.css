@@ -1,0 +1,33 @@
+body {
+  font-family: "Cormorant", serif;
+  font-size: 10vmin;
+  line-height: 1;
+  margin: 0;
+}
+
+a {
+  color: black;
+  text-decoration: none;
+  transition: .15s;
+}
+
+a:hover {
+  color: teal;
+  transition: .15s;
+}
+
+section {
+  width: 95%;
+  margin: 45vmin auto auto;
+}
+
+b {
+  font-family: "Cormorant SC", serif;
+  letter-spacing: .05em;
+  font-weight: 400;
+}
+
+.link+ .link::before {
+  content: '/';
+  color: lightgrey;
+}
