@@ -6,18 +6,38 @@
   <meta name="viewport" content="width=device-width">
   <link rel="canonical" href="https://yuki.rocks">
   <title>chad luo</title>
-  <link href="https://fonts.googleapis.com/css?family=Secular+One"rel="stylesheet">
-<link rel="stylesheet" href="style.css" media="screen" title="no title" charset="utf-8">
+  <link href="https://fonts.googleapis.com/css?family=Bree+Serif" rel="stylesheet">
+  <link rel="stylesheet" href="style.css" media="screen" title="no title" charset="utf-8">
 </head>
 
 <body>
+  <canvas id="zodiac"></canvas>
   <section>
-    chad
-    <a class="link" title="medium" href="//m.yuki.rocks">mdm</a>
-    <a class="link" title="github/chadluo" href="//github.com/chadluo">gthb</a>
-    <a class="link" title="behance/yukirock" href="//www.behance.net/yukirock">bhnc</a>
-    <a class="link" title="instagram/chadluo" href="//instagram.com/chadluo">nstgrm</a>
+    <a class="medium vert link" title="medium" href="//m.yuki.rocks">medium</a>
+    <a class="github vert link" title="github/chadluo" href="//github.com/chadluo">github</a>
+    <a class="behance hori link" title="behance/yukirock" href="//www.behance.net/yukirock">behance</a>
+    <a class="instagram hori link" title="instagram/chadluo" href="//instagram.com/chadluo">instagram</a>
   </section>
+  <script type="text/javascript" src="zodiac.min.js"></script>
+  <script type="text/javascript">
+    new Zodiac('zodiac', {
+      directionX: 0,
+      directionY: 0,
+      velocityX: [.1, .15],
+      velocityY: [.1, .15],
+      bounceX: false,
+      bounceY: false,
+      parallax: .5,
+      pivot: 0,
+      density: 7000, // px^2 per node
+      dotRadius: [1, 2], // px value or [minR,maxR]
+      backgroundColor: 'white', // default transparent; use alpha value for motion blur and ghosting
+      dotColor: 'lightgrey',
+      linkColor: 'lightgrey',
+      linkDistance: 100,
+      linkWidth: .5
+    });
+  </script>
   <script>
     (function(i, s, o, g, r, a, m) {
       i['GoogleAnalyticsObject'] = r;
