@@ -15,10 +15,6 @@ a {
   text-decoration: none;
 }
 
-div {
-  font-family: "calluna-sans", sans-serif !important;
-}
-
 a:hover {
   color: teal;
 }
