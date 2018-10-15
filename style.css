@@ -1,3 +1,8 @@
+body {
+  font-weight: bold;
+  background-color: #F0F0F0;
+}
+
 h1 {
   position: absolute;
   top: 50vh;
@@ -19,34 +24,39 @@ a:hover {
   color: teal;
 }
 
-.fleuron {
+#fleuron {
   position: absolute;
   top: 15vh;
-  left: 50vw;
-  transform: translateX(-50%);
-  font-size: 2rem;
-}
-
-.author,
-.credits {
-  position: absolute;
-  bottom: 15vh;
-  font-weight: bold;
-}
-
-.author {
   left: 5vw;
+  font-size: 1.5em;
 }
 
-.credits {
+#author-1 {
+  position: absolute;
+  top: 15vh;
   right: 5vw;
 }
 
-.credits ul {
+#author-2 {
+  position: absolute;
+  bottom: 15vh;
+  left: 5vw;
+}
+
+#credits {
+  position: absolute;
+  bottom: 15vh;
+  right: 5vw;
+}
+
+#credits ul {
   margin: 0;
 }
 
-.credits li {
-  list-style: none;
-  text-align: right;
+#credits li {
+  display: inline;
+}
+
+#credits li+li::before {
+  content: " | "
 }

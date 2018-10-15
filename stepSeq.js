@@ -1,7 +1,7 @@
 const synth = new Tone.PolySynth().toMaster();
 const chord = ["C3", "E3", "G3", "B3"];
 
-synth.volume.value = -32;
+synth.volume.value = -8;
 
 var matrix = new Array(17);
 for (var i = 0; i < 17; i++) {
@@ -16,8 +16,8 @@ var loop = new Tone.Sequence(function (time, col) {
       c.push(chord[i]);
     }
   }
-  synth.triggerAttackRelease(c, "32n");
-}, [0, 1, 2, 3, 4, 5, 6, 7, 8, 9, 10, 11, 12, 13, 14, 15, 16], "16n");
+  synth.triggerAttackRelease(c, "24n");
+}, [...Array(17).keys()], "16n");
 
 Tone.Transport.start();
 
@@ -34,10 +34,7 @@ function getRandomInt(min, max) {
 }
 
 function inverse(i) {
-  if (i === 1)
-    return 0;
-  else
-    return 1;
+  return i === 1 ? 0 : 1;
 }
 
-setInterval(toggleRandom, 150);
+setInterval(toggleRandom, 225);
