@@ -1,4 +1,4 @@
-<!DOCTYPE html>
+<!doctype html>
 <html lang="en">
   <head>
     <meta charset="UTF-8" />
@@ -7,21 +7,70 @@
     <link rel="stylesheet" href="https://use.typekit.net/vau8eda.css" />
     <style>
       body {
-        margin: 0;
+        font-family:
+          Seravek, "Gill Sans Nova", Ubuntu, Calibri, "DejaVu Sans",
+          source-sans-pro, sans-serif;
       }
+
       .content {
-        color: #555;
-        font: italic 200 10vmax/0.95 source-serif-4-display, serif;
-        margin: 20vh 0;
-        text-align: center;
+        max-width: fit-content;
+        margin: clamp(2rem, 10vw, 8rem) auto;
+        display: grid;
       }
+
       a {
-        text-decoration: none;
-        z-index: 1;
+        padding: 0.5lh 0.5em;
+        margin: -0.5lh -0.5em;
         color: orangered;
       }
+
       a:hover {
         color: orange;
+      }
+
+      time {
+        color: gray;
+      }
+
+      .proj {
+        font-weight: bold;
+      }
+
+      h1 {
+        font-size: 1rem;
+        margin: 0;
+      }
+
+      @media (min-width: 400px) {
+        .content {
+          grid-template-columns: repeat(4, 1fr);
+          grid-template-rows: 4rem;
+          grid-auto-rows: 2rem;
+        }
+
+        .title {
+          grid-column: 1 / -1;
+        }
+
+        time {
+          grid-column-start: 1;
+        }
+
+        .proj {
+          grid-column-start: 2;
+        }
+
+        .desc {
+          grid-column: 3 / -1;
+        }
+
+        .gh {
+          grid-column: 3;
+        }
+
+        .be {
+          grid-column: 4;
+        }
       }
     </style>
     <title>Chad Luo</title>
@@ -29,15 +78,42 @@
 
   <body>
     <div class="content">
-      Chad Luo, pretending to know things
-      <a href="https://glyphdiff.adluo.ch/">glyphdiff</a> Font comparison
-      <!-- prettier-ignore -->
-      <a href="https://hnr.adluo.ch">HNR</a> Hacker News Reader with LLM summaries
-      <a href="https://scales.adluo.ch/">scales</a> Equivalent screen resolution
-      <a href="https://wcc.adluo.ch/">wcc</a> Web components cheatsheet
-      <a href="https://yuanliao.adluo.ch/">yuanliao</a> Genshin Impact build material lookup
-      <a href="https://github.com/chadluo">GitHub</a>
-      <a href="https://www.behance.net/chadluo">Behance</a>
+      <div class="title">
+        <h1>Chad Luo, pretending to know things</h1>
+      </div>
+
+      <time datetime="2024">2024</time>
+      <span class="proj"><a href="https://ab.adluo.ch">ab</a></span>
+      <span class="desc">alphabets</span>
+
+      <time datetime="2023">2023</time>
+      <span class="proj"><a href="https://hnr.adluo.ch">HNR</a></span>
+      <span class="desc">Hacker News Reader with LLM summaries</span>
+
+      <time datetime="2022">2022</time>
+      <span class="proj"
+        ><a href="https://yuanliao.adluo.ch/">yuanliao</a></span
+      >
+      <span class="desc">Genshin Impact build material lookup</span>
+
+      <time datetime="2021">2021</time>
+      <span class="proj"><a href="https://wcc.adluo.ch/">wcc</a></span>
+      <span class="desc">Web components cheatsheet</span>
+
+      <time datetime="2020">2020</time>
+      <span class="proj"><a href="https://scales.adluo.ch/">scales</a></span>
+      <span class="desc">Equivalent screen resolution</span>
+
+      <time datetime="2016">2016</time>
+      <span class="proj"
+        ><a href="https://glyphdiff.adluo.ch/">glyphdiff</a></span
+      >
+      <span class="desc">Font comparison</span>
+
+      <span class="gh"><a href="https://github.com/chadluo">GitHub</a></span>
+      <span class="be"
+        ><a href="https://www.behance.net/chadluo">Behance</a></span
+      >
     </div>
   </body>
 </html>
