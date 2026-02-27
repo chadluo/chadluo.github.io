@@ -1,119 +1,103 @@
 <!doctype html>
 <html lang="en">
-  <head>
-    <meta charset="UTF-8" />
-    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <meta http-equiv="X-UA-Compatible" content="ie=edge" />
-    <link rel="stylesheet" href="https://use.typekit.net/vau8eda.css" />
-    <style>
-      body {
-        font-family:
-          Seravek, "Gill Sans Nova", Ubuntu, Calibri, "DejaVu Sans",
-          source-sans-pro, sans-serif;
+
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <meta http-equiv="X-UA-Compatible" content="ie=edge" />
+  <link rel="stylesheet" href="https://use.typekit.net/vau8eda.css" />
+  <style>
+    html {
+      color-scheme: light dark;
+    }
+
+    body {
+      margin: 0;
+      font-family: Avenir, Montserrat, Corbel, 'URW Gothic', source-sans-pro, sans-serif;
+    }
+
+    .container {
+      max-width: 960px;
+      margin: 2rem;
+    }
+
+    dl {
+      display: grid;
+      gap: 1rem;
+
+      @media (min-width: 960px) {
+        grid-template-columns: repeat(2, 1fr);
       }
+    }
 
-      .content {
-        max-width: fit-content;
-        margin: clamp(2rem, 10vw, 8rem) auto;
-        display: grid;
-      }
+    time {
+      color: GrayText
+    }
+  </style>
+  <title>Chad Luo</title>
+</head>
 
-      a {
-        padding: 0.5lh 0.5em;
-        margin: -0.5lh -0.5em;
-        color: orangered;
-      }
+<body>
+  <div class="container">
+    <h1>Chad Luo</h1>
 
-      a:hover {
-        color: orange;
-      }
-
-      time {
-        color: gray;
-      }
-
-      .proj {
-        font-weight: bold;
-      }
-
-      h1 {
-        font-size: 1rem;
-        margin: 0;
-      }
-
-      @media (min-width: 400px) {
-        .content {
-          grid-template-columns: repeat(4, 1fr);
-          grid-template-rows: 4rem;
-          grid-auto-rows: 2rem;
-        }
-
-        .title {
-          grid-column: 1 / -1;
-        }
-
-        time {
-          grid-column-start: 1;
-        }
-
-        .proj {
-          grid-column-start: 2;
-        }
-
-        .desc {
-          grid-column: 3 / -1;
-        }
-
-        .gh {
-          grid-column: 3;
-        }
-
-        .be {
-          grid-column: 4;
-        }
-      }
-    </style>
-    <title>Chad Luo</title>
-  </head>
-
-  <body>
-    <div class="content">
-      <div class="title">
-        <h1>Chad Luo, pretending to know things</h1>
+    <dl>
+      <div>
+        <dt><a href="https://apps.apple.com/au/app/audis/id6759209950">Audis</a>
+        <dd>Apple Music library viewing iOS app
+        <dd><time datetime="2026">2026</time>
       </div>
 
-      <time datetime="2024">2024</time>
-      <span class="proj"><a href="https://ab.adluo.ch">ab</a></span>
-      <span class="desc">alphabets</span>
+      <div>
+        <dt><a
+            href="https://chromewebstore.google.com/detail/organic-tab-sorter/idodfnibecfjbgdcpkbfmpkgjehaodok">Organic
+            Tab Sorter</a>
+        <dd>Tab sort Chrome extension
+        <dd><time datetime="2026">2026</time>
+      </div>
 
-      <time datetime="2023">2023</time>
-      <span class="proj"><a href="https://hnr.adluo.ch">HNR</a></span>
-      <span class="desc">Hacker News Reader with LLM summaries</span>
+      <div>
+        <dt><a href="https://ab.adluo.ch">ab</a>
+        <dd>alphabets
+        <dd><time datetime="2024">2024</time>
+      </div>
 
-      <time datetime="2022">2022</time>
-      <span class="proj"
-        ><a href="https://yuanliao.adluo.ch/">yuanliao</a></span
-      >
-      <span class="desc">Genshin Impact build material lookup</span>
+      <div>
+        <dt><a href="https://hnr.adluo.ch">HNR</a>
+        <dd>Hacker News Reader with LLM summaries
+        <dd><time datetime="2023">2023</time>
+      </div>
 
-      <time datetime="2021">2021</time>
-      <span class="proj"><a href="https://wcc.adluo.ch/">wcc</a></span>
-      <span class="desc">Web components cheatsheet</span>
+      <div>
+        <dt><a href="https://yuanliao.adluo.ch/">yuanliao</a>
+        <dd>Genshin Impact build material lookup
+        <dd><time datetime="2022">2022</time>
+      </div>
 
-      <time datetime="2020">2020</time>
-      <span class="proj"><a href="https://scales.adluo.ch/">scales</a></span>
-      <span class="desc">Equivalent screen resolution</span>
+      <div>
+        <dt><a href="https://wcc.adluo.ch/">wcc</a>
+        <dd>Web components cheatsheet
+        <dd><time datetime="2021">2021</time>
+      </div>
 
-      <time datetime="2016">2016</time>
-      <span class="proj"
-        ><a href="https://glyphdiff.adluo.ch/">glyphdiff</a></span
-      >
-      <span class="desc">Font comparison</span>
+      <div>
+        <dt><a href="https://scales.adluo.ch/">scales</a>
+        <dd>Equivalent screen resolution
+        <dd><time datetime="2020">2020</time>
+      </div>
 
-      <span class="gh"><a href="https://github.com/chadluo">GitHub</a></span>
-      <span class="be"
-        ><a href="https://www.behance.net/chadluo">Behance</a></span
-      >
-    </div>
-  </body>
+      <div>
+        <dt><a href="https://glyphdiff.adluo.ch/">glyphdiff</a>
+        <dd>Font comparison
+        <dd><time datetime="2016">2016</time>
+      </div>
+
+    </dl>
+
+    <p>pretending to know things
+
+    <p><a href="https://github.com/chadluo">GitHub</a> <a href="https://www.behance.net/chadluo">Behance</a>
+  </div>
+</body>
+
 </html>
