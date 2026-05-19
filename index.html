@@ -5,7 +5,12 @@
   <meta charset="UTF-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1.0" />
   <meta http-equiv="X-UA-Compatible" content="ie=edge" />
+  <title>Chad Luo</title>
   <style>
+    * {
+      box-sizing: border-box;
+    }
+
     html {
       color-scheme: light dark;
     }
@@ -16,15 +21,15 @@
     }
 
     .container {
-      max-width: 960px;
-      margin: 2rem;
+      max-width: 60rem;
+      padding: 2rem;
     }
 
-    dl {
+    .projects {
       display: grid;
       gap: 1rem;
 
-      @media (min-width: 960px) {
+      @media (min-width: 60rem) {
         grid-template-columns: repeat(2, 1fr);
       }
     }
@@ -34,14 +39,13 @@
     }
 
     time {
-      color: GrayText
+      color: GrayText;
     }
   </style>
-  <title>Chad Luo</title>
 </head>
 
 <body>
-  <div class="container">
+  <main class="container">
     <h1>Chad Luo</h1>
 
     <dl class="projects">
@@ -53,6 +57,13 @@
       </div>
 
       <div itemscope itemtype="https://schema.org/SoftwareApplication">
+        <dt><a itemprop="url" href="https://github.com/chadluo/web-brutalism-design"><span itemprop="name">Web Brutalism</a></span>
+        <dd itemprop="description">Web design skill
+        <dd class="platform" itemprop="targetProduct">Coding agents
+        <dd><time itemprop="datePublished" datetime="2026">2026</time>
+      </div>
+
+      <div itemscope itemtype="https://schema.org/SoftwareApplication">
         <dt><a itemprop="url" href="https://marketplace.visualstudio.com/items?itemName=chadluo.duotone-vary"><span itemprop="name">Duotone Vary</a></span>
         <dd itemprop="description">Duotone with customizable tone colors
         <dd class="platform" itemprop="targetProduct">Visual Studio Code
@@ -60,8 +71,15 @@
       </div>
 
       <div itemscope itemtype="https://schema.org/SoftwareApplication">
-        <dt><a itemprop="url" href="https://chromewebstore.google.com/detail/organic-new-tab-page/mdegkojkdglleimfamjcllilpklbehcj"><span itemprop="name">Organic New Tab Page</a></span></dt>
-        <dd itemprop="description">New tab page of bookmarks and open tabs</dd>
+        <dt><a itemprop="url" href="https://chromewebstore.google.com/detail/organic-tabs/bmpakdlejickdodgdkjeplhobgaakogh"><span itemprop="name">Organic Tabs</a></span>
+        <dd itemprop="description">Manage many tabs, bookmarks & lists
+        <dd class="platform" itemprop="targetProduct">Google Chrome
+        <dd><time itemprop="datePublished" datetime="2026">2026</time>
+      </div>
+
+      <div itemscope itemtype="https://schema.org/SoftwareApplication">
+        <dt><a itemprop="url" href="https://chromewebstore.google.com/detail/urlslice/dpnmhmajfcnidbogkkldpaiapioljepk"><span itemprop="name">url_slice</a></span>
+        <dd itemprop="description">Structural URL editor
         <dd class="platform" itemprop="targetProduct">Google Chrome
         <dd><time itemprop="datePublished" datetime="2026">2026</time>
       </div>
@@ -74,12 +92,6 @@
         <dd><time itemprop="datePublished" datetime="2026">2026</time>
       </div>
 
-      <div itemscope itemtype="https://schema.org/SoftwareApplication">
-        <dt><a itemprop="url" href="https://chromewebstore.google.com/detail/organic-tab-sorter/idodfnibecfjbgdcpkbfmpkgjehaodok"><span itemprop="name">Organic Tab Sorter</span></a>
-        <dd itemprop="description">Sort tabs by title, date or properly by URL
-        <dd class="platform" itemprop="targetProduct">Google Chrome
-        <dd><time itemprop="datePublished" datetime="2026">2026</time>
-      </div>
 
       <div itemscope itemtype="https://schema.org/SoftwareApplication">
         <dt><a itemprop="url" href="https://ab.adluo.ch"><span itemprop="name">ab</span></a>
@@ -121,7 +133,7 @@
     <p>pretending to know things
 
     <p><a href="https://github.com/chadluo">GitHub</a> &middot; <a href="https://www.behance.net/chadluo">Behance</a>
-  </div>
+  </main>
 </body>
 
 </html>
