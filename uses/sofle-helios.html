@@ -1,0 +1,144 @@
+<!doctype html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta http-equiv="X-UA-Compatible" content="ie=edge" />
+  <title>Chad Luo / Uses / Sofle Helios</title>
+  <link rel="stylesheet" href="../styles.css" />
+</head>
+
+
+<body>
+  <main class="container">
+    <h1>Sofle v2.1 RGB w/ Helios</h1>
+
+    <h2>Why new keybord</h2>
+
+    <p>Anyway, impulse purchase. I’ve been using the <a href="https://deskthority.net/wiki/Infinity_ErgoDox">Infinity
+        Ergodox</a> (<em>IE</em>; although out of no reason I always remembered it as Ergodox Infinity) for a while and the
+      key between <kbd>j</kbd> and <kbd>l</kbd> has failed mutliple times. I thought the switch was at fault and replacing
+      it worked every time until I ran out of spare switches. Haven’t checked mechanical keyboards for quite some time I’m
+      no longer sure about the switches, especially what would be a good alternative to MX Red. Long story short, I went
+      with <a href="https://www.gateron.co/products/gateron-g-pro-3-0-switch-set">Gateron G Pro 3.0 Red</a> since Keychron
+      seems to be using them. The set came with 110 switches but I only needed a few, and given I have some spare keycaps,
+      it’s kind of intuitive to build another keyboard just in case IE dies.
+
+    <h2>Why Sofle</h2>
+
+    <p>Although I’m quite happy with the IE split ortholinear layout, I wanted to check some other ergo options first.
+      As I said I haven’t checked mechanical keyboards for a while so I must have missed quite a lot of them, but I just
+      want to avoid normal row-staggered keyboards. I do have a few of these keyboards and I always remap <kbd>Caps</kbd>
+      to <kbd>Ctrl</kbd> and <kbd>Ctrl</kbd> to <kbd>Esc</kbd>, under macOS via <a href="https://support.apple.com/en-au/guide/mac-help/mchlp1011/13.0/mac/13.0">Modifier Settings</a> and under
+      Windows via <a href="https://learn.microsoft.com/en-us/windows/powertoys/keyboard-manager">PowerToys Keyboard
+        Manager</a>. For membrane keyboards of fixed layout you can only change the keymapping, but for mechanical keyboards
+      it’s easier to find ones with an ergo oriented layout.
+
+    <p>Keychron has <a href="https://keychron.com.au/products/keychron-q11-qmk-custom-mechanical-keyboard">Q11</a> which
+      is split but doesn’t come with any more ergo design. They also have <a href="https://keychron.com.au/products/keychron-v10-alice-layout-qmk-custom-mechanical-keyboard">V10</a> and other
+      Alice layout models including V8. The Alice layout seems fine, but the barebone kit never came in stock in AU and
+      it’s totally unnecessary to buy and transit from Taobao.
+
+    <p>Then I found some local stores selling split keyboards at much higher stock level than Keychron, with popular
+      models including Corne, ErgoDash, Lily58 and Sofle. Corne seems too radical for me as I wanted to keep the number
+      row, and the rotary encoders on Sofle feels like something fun. So far Sofle has three versions: V1, V2 and RGB
+      (also labelled as V2.1) with some differences in <a href="https://josefadamcik.github.io/SofleKeyboard/#versions">layout and internal designs</a>. I don’t need RGB but
+      the new version probably works better I guess.
+
+    <h2>Assembling</h2>
+
+    <p>The <a href="https://josefadamcik.github.io/SofleKeyboard/build_guide.html">V1/V2 version build guide</a> has the
+      common steps. The <a href="https://josefadamcik.github.io/SofleKeyboard/build_guide_rgb.html">RGB version build
+        guide</a> is mostly about the LEDs.
+
+    <h3 id="soldering">Soldering</h3>
+
+    <p>Sofle is harder to build than IE as you’ll need to hand solder diodes and microcontrollers as well, especially
+      where the diodes are in <a href="https://en.wikipedia.org/wiki/Surface-mount_technology">SMT</a> form factor. The
+      best way should be using <a href="https://www.youtube.com/watch?v=yNOGEtqn85o">soldering paste and hot air gun
+        soldering</a> which is probably quite close to the industrial production procedure, but I’d like to try my soldering
+      iron first before ordering more equipments.
+
+    <p>I checked some tutorials and found this procedure works well for these 2-feet SMT components:
+
+    <ol>
+      <li>Melt and attach some solder to one foot</li>
+      <li>Keep the solder melted with the soldering iron, make sure the component direction is correct, place the it in
+        position and dip the foot in the melted solder. For the hotswap socket it’s easy to check the direction; for
+        diodes for example in my case the bar as marked in <code>| T4</code> on the diode should align with the bar in the
+        <code>|◁</code> sign on the PCB.
+      </li>
+      <li>Solder the other foot.</li>
+    </ol>
+
+    <p>You can do this in batches.
+
+    <p>You can also refer to the <a href="https://reviung.com/build-guide/391/">Reviung41 build guide</a> or other
+      Reviung build guides for microcontrollers, diodes, LEDs and hotswap sockets. Although they are different keyboards,
+      these components are the same and the guide comes with pictures and detailed instructions.
+
+    <h3 id="microcontroller">Microcontroller</h3>
+
+    <p>The website sells both <a href="https://github.com/0xCB-dev/0xCB-Helios">Helios</a> and
+      <a href="https://nicekeyboards.com/nice-nano/">nice!nano</a>. The former is a Raspberri Pi based replacement for
+      the ATmega32U4 mentioned in the build guide, and the latter seems to support wireless. I went with Helios as I
+      don’t need wireless at the moment.
+
+    <p>Something to notice is that Helios has 13 pins on one side instead of 12 in the <a href="https://www.sparkfun.com/products/12640">ATmega32U4 pro micro</a>. If you check the pinouts you can find that
+      <code>10</code> and <code>11</code> on the Helios doesn’t have a match on the ATmega32U4, therefore the pins
+      should align to the far side from the USB port, leaving <code>10</code> and <code>11</code> empty.
+
+    <h2 id="firmware">Firmware</h2>
+
+    <p>To start with, you can download the default firmware (<code>.uf2</code>) from <a href="https://docs.keebd.com/firmware/">KEEBD</a>. The keymap is the one from <a href="https://github.com/josefadamcik/SofleKeyboard">Sofle</a> homepage. To flash:
+
+    <ol>
+      <li>Disconnect all keyboards and connect one side without the TRRS cable. The TRRS cable is not hot unpluggable so
+        just disconnect it to be safe.</li>
+      <li>Long press the reset key (&gt;500ms). The keyboard should mount as a disk.</li>
+      <li>Copy the <code>.uf2</code> firmware file to the disk root. The
+        keyboard should recognize the firmware, apply it and reconnect as a keyboard.</li>
+      <li>Disconnect this side, connect the other side and flash it the same way.</li>
+      <li>When bots sides are flashed, connect the TRRS cable and connect to the computer.</li>
+    </ol>
+
+    <p>Apparently this keyboard only supports using the left hand side as main and right hand side as sub. If you
+      connect the right hand side to the computer it will be in a mirror flipped state where <kbd>Q</kbd> becomes
+      <kbd>P</kbd> etc.
+
+    <p>Helios naturally comes with QMK. If you want to configure and build your own firmware you need to have the QMK
+      environment (for example QMK MSYS for Windows) and you probably don’t need the QMK Toolbox.
+
+    <p>Working with QMK, to create a firmware file:
+
+    <ol>
+      <li>Follow the docs and set up the local environment, make sure the <code>qmk</code> command works.</li>
+      <li>Run <code>qmk compile -kb sofle -km default -e CONVERT_TO=helios</code></li>
+      <li>If succeeded, in <code>.build/</code> directory there should be a <code>sofle_rev1_default_helios.uf2</code>
+        firmware file.
+      </li>
+      <li>Flash the <code>.uf2</code> firmware the same way as mentioned
+        above.</li>
+    </ol>
+
+    <p>To properly manage your layout and firmware it’s probably better to follow the guide to create your own fork and
+      create your own branch. You can sync the main branch from upstream and merge it to your branch to keep up with
+      upstream changes without breaking your own. Most of your changes should be only within files at
+      <code>keyboards/sofle/keymaps/[your key map]</code>.
+
+    <h2 id="miryoku">Miryoku</h2>
+
+    <p>Docs can be found at both <a href="https://github.com/manna-harbour/miryoku/tree/master/docs/reference">manna-harbour/miryoku</a>
+      and <a href="https://github.com/manna-harbour/miryoku_qmk/tree/miryoku/users/manna-harbour_miryoku">manna-harbour/miryoku_qmk</a>.
+
+    <p>It’s available to build Miryoku directly from the main qmk repo, running <code>qmk compile -kb sofle -km
+manna-harbour_miryoku -e CONVERT_TO=helios</code> and collect the firmware from the same location, but some config including
+      base alpha layout will also be nice to have. For ease of management, edit
+      <a href="https://github.com/qmk/qmk_firmware/blob/master/keyboards/sofle/keymaps/manna-harbour_miryoku/config.h">manna-harbour_miryoku/config.h</a>
+      or add a <code>rules.mk</code> in the same directory for relevant configs.
+
+  </main>
+</body>
+
+</html>
