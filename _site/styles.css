@@ -1,0 +1,39 @@
+* {
+  box-sizing: border-box;
+}
+
+html {
+  color-scheme: light dark;
+}
+
+body {
+  margin: 0;
+  font-family: Avenir, Montserrat, Corbel, 'URW Gothic', source-sans-pro, sans-serif;
+  min-height: 100vh;
+}
+
+.container {
+  max-width: 60rem;
+  padding: 2rem;
+}
+
+.projects {
+  display: grid;
+  gap: 1rem;
+
+  @media (min-width: 60rem) {
+    grid-template-columns: repeat(2, 1fr);
+  }
+}
+
+.platform {
+  font-style: italic;
+}
+
+time {
+  color: GrayText;
+}
+
+nav[aria-label="Breadcrumb"] {
+  padding: 2rem;
+}
