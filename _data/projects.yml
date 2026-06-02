@@ -1,0 +1,65 @@
+- name: Audis
+  url: https://apps.apple.com/au/app/audis/id6759209950
+  description: Apple Music added today
+  platform: App Store
+  year: 2026
+
+- name: Web Brutalism
+  url: https://github.com/chadluo/web-brutalism-design
+  description: Web design skill
+  platform: Coding agents
+  year: 2026
+
+- name: Duotone Vary
+  url: https://marketplace.visualstudio.com/items?itemName=chadluo.duotone-vary
+  description: Duotone with customizable tone colors
+  platform: Visual Studio Code
+  year: 2026
+
+- name: Organic Tabs
+  url: https://chromewebstore.google.com/detail/organic-tabs/bmpakdlejickdodgdkjeplhobgaakogh
+  description: "Manage many tabs, bookmarks & lists"
+  platform: Google Chrome
+  year: 2026
+
+- name: url_slice
+  url: https://chromewebstore.google.com/detail/urlslice/dpnmhmajfcnidbogkkldpaiapioljepk
+  description: Structural URL editor
+  platform: Google Chrome
+  year: 2026
+
+- name: man-vs-tech
+  url: https://www.npmjs.com/package/man-vs-tech
+  description: Coding agents contribution proportion
+  platform: NPM
+  year: 2026
+
+- name: ab
+  url: https://ab.adluo.ch
+  description: alphabets
+  year: 2024
+
+- name: HNR
+  url: https://hnr.adluo.ch
+  description: Hacker News Reader with LLM summaries
+  year: 2023
+
+- name: yuanliao
+  url: https://yuanliao.adluo.ch/
+  description: Genshin Impact build material lookup
+  year: 2022
+
+- name: wcc
+  url: https://wcc.adluo.ch/
+  description: Web components cheatsheet
+  year: 2021
+
+- name: scales
+  url: https://scales.adluo.ch/
+  description: Equivalent screen resolution
+  year: 2020
+
+- name: glyphdiff
+  url: https://glyphdiff.adluo.ch/
+  description: Font comparison
+  year: 2016
