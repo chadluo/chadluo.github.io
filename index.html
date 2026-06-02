@@ -33,7 +33,8 @@
       <div>
         <dt><a href="{{ project.url }}">{{ project.name }}</a>
         <dd>{{ project.description }}
-        {% if project.platform %}<dd class="platform">{{ project.platform }}{% endif %}
+          {% if project.platform %}
+        <dd class="platform">{{ project.platform }}{% endif %}
         <dd><time datetime="{{ project.year }}">{{ project.year }}</time>
       </div>
       {% endfor %}
@@ -41,9 +42,9 @@
 
     <p>pretending to know things
 
-    <p><a href="https://github.com/chadluo">GitHub</a> &middot; <a href="https://www.behance.net/chadluo">Behance</a>
-
     <p><a href="/uses/">Uses</a>
+
+    <p><a href="https://github.com/chadluo">GitHub</a> &middot; <a href="https://www.behance.net/chadluo">Behance</a>
   </main>
 </body>
 
