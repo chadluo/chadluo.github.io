@@ -4,6 +4,16 @@
   platform: App Store
   year: 2026
 
+- name: Miryoku Visualizer
+  url: https://adluo.ch/miryoku-visualizer/
+  description: Visualize Miryoku layout by different compile options
+  year: 2026
+
+- name: Model Watch
+  url: https://adluo.ch/model-watch/
+  description: Model release cycles
+  year: 2026
+
 - name: Web Brutalism
   url: https://github.com/chadluo/web-brutalism-design
   description: Web design skill
