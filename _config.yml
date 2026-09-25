@@ -1,2 +1,4 @@
 url: https://adluo.ch
 enforce_ssl: adluo.ch
+exclude:
+  - mise.toml

@@ -1,0 +1,12 @@
+{
+  "version": "0.2.0",
+  "configurations": [
+    {
+      "name": "Jekyll serve",
+      "type": "node-terminal",
+      "request": "launch",
+      "command": "mise exec -- bundle exec jekyll serve --livereload",
+      "cwd": "${workspaceFolder}"
+    }
+  ]
+}
