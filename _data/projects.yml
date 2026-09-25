@@ -14,6 +14,16 @@
   description: Model release cycles
   year: 2026
 
+- name: Wheel color picker
+  url: https://adluo.ch/color-picker/
+  description: A color picker where mouse wheel changes hue
+  year: 2026
+
+- name: Window Shadow
+  url: https://adluo.ch/window-shadow/
+  description: shadows that don't stack
+  year: 2026
+
 - name: Web Brutalism
   url: https://github.com/chadluo/web-brutalism-design
   description: Web design skill
