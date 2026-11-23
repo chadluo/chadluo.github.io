@@ -1,7 +1,15 @@
+- name: Forma
+  url: https://apps.apple.com/us/app/forma-photo-grid-camera/id6821825960
+  description: Gyro based freeform photo grid camera
+  platform: App Store
+  isSerious: yes
+  year: 2026
+
 - name: Audis
   url: https://apps.apple.com/au/app/audis/id6759209950
   description: Apple Music added today
   platform: App Store
+  isSerious: yes
   year: 2026
 
 - name: Miryoku Visualizer
@@ -24,9 +32,9 @@
   description: shadows that don't stack
   year: 2026
 
-- name: Web Brutalism
-  url: https://github.com/chadluo/web-brutalism-design
-  description: Web design skill
+- name: Skills
+  url: https://github.com/chadluo/skills
+  description: Herdr coordinator, brutalism web design
   platform: Coding agents
   year: 2026
 
@@ -40,12 +48,14 @@
   url: https://chromewebstore.google.com/detail/organic-tabs/bmpakdlejickdodgdkjeplhobgaakogh
   description: "Manage many tabs, bookmarks & lists"
   platform: Google Chrome
+  isSerious: yes
   year: 2026
 
 - name: url_slice
-  url: https://chromewebstore.google.com/detail/urlslice/dpnmhmajfcnidbogkkldpaiapioljepk
+  url: https://adluo.ch/url_slice/
   description: Structural URL editor
-  platform: Google Chrome
+  platform: Google Chrome, Mozilla Firefox
+  isSerious: yes
   year: 2026
 
 - name: man-vs-tech
@@ -62,6 +72,7 @@
 - name: HNR
   url: https://hnr.adluo.ch
   description: Hacker News Reader with LLM summaries
+  isSerious: yes
   year: 2023
 
 - name: yuanliao
@@ -82,4 +93,5 @@
 - name: glyphdiff
   url: https://glyphdiff.adluo.ch/
   description: Font comparison
+  isSerious: true
   year: 2016
