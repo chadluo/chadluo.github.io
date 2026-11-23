@@ -28,8 +28,9 @@
   <main class="container">
     <h1>Chad Luo</h1>
 
+    <h2>Serious</h2>
     <dl class="projects">
-      {% for project in site.data.projects %}
+      {% for project in site.data.projects %}{% if project.isSerious %}
       <div>
         <dt><a href="{{ project.url }}">{{ project.name }}</a>
         <dd>{{ project.description }}
@@ -37,8 +38,15 @@
         <dd class="platform">{{ project.platform }}{% endif %}
         <dd><time datetime="{{ project.year }}">{{ project.year }}</time>
       </div>
-      {% endfor %}
+      {% endif %}{% endfor %}
     </dl>
+
+    <h2>Not serious</h2>
+    <ul>
+      {% for project in site.data.projects %}{% unless project.isSerious %}
+      <li><a href="{{ project.url }}">{{ project.name }}</a> &ndash; {{ project.description }}
+      {% endunless %}{% endfor %}
+    </ul>
 
     <p>pretending to know things
 
